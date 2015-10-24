@@ -1,12 +1,19 @@
 var express = require('express'),
     router = express.Router(),
-    postsData = require('../data/posts.json');
+    post = require('../models/post');
 
 /**
  * Get request for users
  */
 router.get('/', function(req, res) {
-    res.send(postsData);
+    var userId = req.query.userId;
+
+    post.Post.find({
+            userId: userId
+        },
+        function(err, posts) {
+            res.json(posts);
+        });
 });
 
 module.exports = router;

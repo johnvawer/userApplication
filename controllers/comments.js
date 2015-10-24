@@ -1,12 +1,17 @@
 var express = require('express'),
     router = express.Router(),
-    commentData = require('../data/comments.json');
+    comment = require('../models/comment');
 
 /**
  * Get request for users
  */
 router.get('/', function(req, res) {
-    res.send(commentData);
+    var postId = req.query.postId
+    comment.Comment.find({
+        postId: postId
+    }, function(err, comments) {
+        res.json(comments);
+    })
 });
 
 module.exports = router;
