@@ -32,15 +32,13 @@ app.use(require('./controllers'));
 /**
  * Connect to the database
  */
-db.connect('mongodb://localhost/dayco-stl', function(err) {
+db.connect('mongodb://localhost/userApplication', function(err) {
     if (!err) {
-        db.getDatabaseInfo();
+        db.initUserData();
     } else {
         console.error(err);
     }
 });
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

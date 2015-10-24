@@ -7,11 +7,9 @@ var mongoose = require('mongoose'),
 
 user = new mongoose.Schema({
     username: String,
-    first_name: String,
-    surname: String,
-    password: String,
+    name: String,
     email: String,
-    account_type: String
+    id: Number
 });
 
 module.exports = {

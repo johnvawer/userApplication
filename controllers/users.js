@@ -11,12 +11,4 @@ router.get('/', function(req, res) {
     });
 });
 
-router.post('/', function(req, res) {
-    var userModel = new user.User(req.body);
-
-    userModel.save(function(err, newUser) {
-        res.json(newUser);
-    });
-});
-
 module.exports = router;

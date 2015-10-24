@@ -5,34 +5,17 @@
 var express = require('express'),
     router = express.Router();
 
-router.use('/user', require('./user'));
+router.use('/users', require('./users'));
+router.use('/posts', require('./posts'));
+router.use('/comments', require('./comments'));
 
 /**
  * 
  */
-router.get('/', function(req, res) {
-    res.sendFile('app/index.html', {
-        root: './public/'
-    });
-});
-
-/**
- *
- */
-router.get('/teststl', function(req, res) {
-    // get file as array buffer and respond with contents
-    var fs = require('fs');
-
-    fs.readFile('public/stl/Gnome.stl', function(err, data) {
-        if (err) {
-            console.error(err);
-            return res.status(500).send(err);
-        }
-
-        return res.status(200).send(data);
-
-    });
-
-});
+// router.get('/', function(req, res) {
+//     res.sendFile('app/index.html', {
+//         root: './public/'
+//     });
+// });
 
 module.exports = router;
