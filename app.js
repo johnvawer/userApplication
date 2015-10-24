@@ -35,6 +35,8 @@ app.use(require('./controllers'));
 db.connect('mongodb://localhost/userApplication', function(err) {
     if (!err) {
         db.initUserData();
+        db.initCommentsData();
+        db.initPostsData();
     } else {
         console.error(err);
     }

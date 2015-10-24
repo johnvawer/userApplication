@@ -37,10 +37,26 @@ module.exports = {
     },
 
     initCommentsData: function() {
+        var commentData = require('./data/comments.json'),
+            commentModel = require('./models/comment.js'),
+            comments = commentModel.Comment;
 
+        commentModel.Comment.find(function(err, records) {
+            if (records.length === 0) {
+                comments.create(commentData);
+            }
+        });
     },
 
     initPostsData: function() {
+        var postData = require('./data/posts.json'),
+            postModel = require('./models/post.js'),
+            posts = postModel.Post;
 
+        postModel.Post.find(function(err, records) {
+            if (records.length === 0) {
+                posts.create(postData);
+            }
+        });
     }
 };
