@@ -11,9 +11,15 @@ NodeJS
 ##Running the application
 Clone the application
 
-```Run npm install```
-```Run bower install```
-```run npm start```
+```
+Run npm install
+```
+```
+Run bower install
+```
+```
+run npm start
+```
 
 The application will write some data to the database as part of the startup service.
 
