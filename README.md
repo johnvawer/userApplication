@@ -9,16 +9,16 @@ MongoDB installed and running.
 NodeJS
 
 ##Running the application
-Clone the application
+Clone the application and run the following commands:
 
 ```
-Run npm install
+npm install
 ```
 ```
-Run bower install
+bower install
 ```
 ```
-run npm start
+npm start
 ```
 
 The application will write some data to the database as part of the startup service.
