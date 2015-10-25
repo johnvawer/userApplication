@@ -3,7 +3,7 @@ var express = require('express'),
     post = require('../models/post');
 
 /**
- * Get request for users
+ * Get request for posts
  */
 router.get('/', function(req, res) {
     var userId = req.query.userId;

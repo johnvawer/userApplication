@@ -3,10 +3,11 @@ var express = require('express'),
     comment = require('../models/comment');
 
 /**
- * Get request for users
+ * Get request for comments
  */
 router.get('/', function(req, res) {
     var postId = req.query.postId
+
     comment.Comment.find({
         postId: postId
     }, function(err, comments) {
