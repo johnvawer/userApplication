@@ -1,6 +1,6 @@
 <h1>Users</h1>
 
-<div ng-repeat="user in users" class="user-list">
+<div ng-repeat="user in users" ng-click="model.onUserClick(user.id)" class="user-list">
 {{user.id}}<br>
 {{user.username}}<br>
 {{user.name}}<br>

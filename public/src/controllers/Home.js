@@ -9,4 +9,8 @@ angular.module('Home', ['Rest']).controller('HomeController', function($scope, $
         });
     }
 
+    this.onUserClick = function(userId) {
+        console.log(userId);
+    };
+
 });
