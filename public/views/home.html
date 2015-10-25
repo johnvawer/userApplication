@@ -1,8 +1,8 @@
 <h1>Users</h1>
 
-<div ng-repeat="user in users" ng-click="model.onUserClick(user.id)" class="user-list">
-{{user.id}}<br>
-{{user.username}}<br>
-{{user.name}}<br>
-{{user.email}}<br>
-</div>
+<dl ng-repeat="user in users" ng-click="model.onUserClick(user.id)" class="list">
+	<dt>{{user.name}}</dt>
+	<dd>{{user.id}}</dd>
+	<dd>{{user.username}}</dd>
+	<dd>{{user.email}}</dd>
+</dl>

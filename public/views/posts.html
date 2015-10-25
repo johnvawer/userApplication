@@ -1,0 +1,9 @@
+<h1>Posts</h1>
+
+<dl ng-repeat="post in posts" ng-click="model.onPostClick(post.id, post.userId)" class="list">
+<dt>{{post.title}}</dt>
+<dd>{{post.id}}</dd>
+<dd>{{post.message}}</dd>
+</dl>
+
+<button class="btn btn-default" ng-click="model.onBackToUsers()">Back to Users</button>

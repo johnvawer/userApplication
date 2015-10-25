@@ -8,7 +8,8 @@ var mongoose = require('mongoose'),
 comment = new mongoose.Schema({
     name: String,
     postId: Number,
-    id: Number
+    id: Number,
+    text: String
 });
 
 module.exports = {

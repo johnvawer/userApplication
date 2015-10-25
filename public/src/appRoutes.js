@@ -4,8 +4,13 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         .when('/', {
             templateUrl: 'views/home.html',
             controller: 'HomeController as model'
+        })
+        .when('/post', {
+            templateUrl: 'views/posts.html',
+            controller: 'PostsController as model'
+        })
+        .when('/comment', {
+            templateUrl: 'views/comments.html',
+            controller: 'CommentsController as model'
         });
-
-    $locationProvider.html5Mode(true);
-
 }]);

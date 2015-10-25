@@ -1,1 +1,1 @@
-angular.module('userApp', ['ngRoute', 'appRoutes', 'Home', 'Rest']);
+angular.module('userApp', ['ngRoute', 'appRoutes', 'Home', 'Posts', 'Comments', 'Rest']);

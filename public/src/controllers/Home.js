@@ -9,8 +9,15 @@ angular.module('Home', ['Rest']).controller('HomeController', function($scope, $
         });
     }
 
+    /**
+     * On selecting a user load the posts relating to the selected user
+     *
+     * @param {Number} userId
+     */
     this.onUserClick = function(userId) {
-        console.log(userId);
+        $location.path('post').search({
+            userId: userId
+        });
     };
 
 });
