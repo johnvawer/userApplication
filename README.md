@@ -17,6 +17,9 @@ npm install
 ```
 bower install
 ```
+
+Before starting the application ensure that MongoDB is running
+
 ```
 npm start
 ```
